@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1581/1581594.png" type="image/x-icon">
+
+    <title>CatDog</title>
+    <link rel="stylesheet" href="../css/usuario.css">
+</head>
+<body>
+    <header>
+        <div class="menu container">
+          <img class="logo-1" src="https://i.pinimg.com/564x/d2/f7/75/d2f7756393d214d95adb3dd227fec1d6.jpg" alt="" width="150">
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="img/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <div class="menu-1">
+                    <ul>
+                        <li><a href="prograCitaUsu.html">Programar Cita</a></li>
+                        <li><a href="expediUsu.html">Expediente</a></li>
+                        <li><a href="verCitaUsu.html">Citas</a></li>
+                        <li><a href="mascotaUsu.html">Mascotas</a></li>
+                    </ul>
+                </div>
+                <button class="btn-1" onclick="window.location.href='login.html'">Cerrar Sesión</button>
+                <div class="container-icon">
+                    <div class="container-cart-icon">
+                        <img src="https://e7.pngegg.com/pngimages/833/426/png-clipart-black-shopping-cart-icon-for-free-black-shopping-cart.png" alt="carrito" class="icon-cart" />
+                        <div class="count-products">
+                            <span id="contador-productos">0</span>
+                        </div>
+                    </div>
+                    <div class="container-cart-products hidden-cart">
+                    </div>
+                    <button class="boton-pagar" onclick="pagar()">Pagar</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    
+      <section class="productos">
+        <ul>
+          <li>
+            <div id="producto">
+                <img class="imagen" style=" width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/fb/7f/dc/fb7fdc7957f4e07b70d4035411966bd7.jpg" alt="Producto 1">
+                <h3 class="nombre">Estante y platos para alimento</h3>
+                <p class="precio">Precio: $10.00</p>
+                <p>Estante de madera para colocar los platos de alimento, incluye Recipiente para agua y alimento.</p>
+                <button class="boton" onclick="agregarAlCarrito('Estante y platos para alimento', 'https://i.pinimg.com/564x/fb/7f/dc/fb7fdc7957f4e07b70d4035411966bd7.jpg', 10.00)">Agregar al carrito</button>
+            </div>
+          </li>
+          <li>
+            <div id="producto">
+              <img class="imagen" style=" width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/0d/cb/dd/0dcbdd281da5ed4336b96122f7937aed.jpg" alt="Producto 2">
+              <h3 class="nombre">Arból para gatos</h3>
+              <p  class="precio">Precio: $50.00</p>
+              <p>Arbol para gatos con diferentes niveles y lugar para descansar, pilares recubiertos para que pueda rascar.</p>
+              <button class="boton" onclick="agregarAlCarrito('Arból para gatos', 'https://i.pinimg.com/564x/0d/cb/dd/0dcbdd281da5ed4336b96122f7937aed.jpg', 50.00)">Agregar al carrito</button>
+
+            </div>
+          </li>
+          <li>
+            <div id="producto">
+              <img  class="imagen" style=" width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/69/d1/f3/69d1f3652d26cf1b100caa8b11c01ec3.jpg" alt="Producto 3">
+              <h3 class="nombre">Sofa para mascotas</h3>
+              <p class="precio">Precio: $30.00</p>
+              <p>Sofa con orejas de gato ideal para que la mascota pueda descansar, incluye cojin.</p>
+              <button class="boton" onclick="agregarAlCarrito('Sofa para mascotas', 'https://i.pinimg.com/564x/69/d1/f3/69d1f3652d26cf1b100caa8b11c01ec3.jpg' , 30.00)">Agregar al carrito</button>
+
+            </div>
+          </li>
+          <li>
+              <div id="producto">
+                <img class="imagen" style=" width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/44/41/8a/44418a79528291db0cbd78dad5b143ff.jpg" alt="Producto 3">
+                <h3 class="nombre">Collar</h3>
+                <p class="precio">Precio: $5.00</p>
+                <p>Collar ajustable con diseño de flores, incluye un pequeño adorno.</p>
+                <button class="boton" onclick="agregarAlCarrito('Collar', 'https://i.pinimg.com/564x/44/41/8a/44418a79528291db0cbd78dad5b143ff.jpg', 5.00)">Agregar al carrito</button>
+
+              </div>
+            </li>
+            <li>
+              <div id="producto">
+                <img class="imagen" style=" width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/d1/cb/6e/d1cb6ee2a19e8f2c0ab3de314018ee86.jpg" alt="Producto 3">
+                <h3 class="nombre">Arenero</h3>
+                <p class="precio">Precio: $25.00</p>
+                <p>Arenero cerrado para gatos, incluye pala para recoger.</p>
+                <button class="boton" onclick="agregarAlCarrito('Arenero', 'https://i.pinimg.com/564x/d1/cb/6e/d1cb6ee2a19e8f2c0ab3de314018ee86.jpg', 25.00)">Agregar al carrito</button>
+
+              </div>
+            </li>
+            <li>
+              <div id="producto">
+                <img class="imagen" style=" width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/04/2f/f4/042ff4fe447b12a7754ea44da86adc92.jpg" alt="Producto 3">
+                <h3 class="nombre">Comida enlatada</h3>
+                <p class="precio">Precio: $10.00</p>
+                <p>Comida para gato enlatada facil de abrir.</p>
+                <button class="boton" onclick="agregarAlCarrito('Comida enlatada', 'https://i.pinimg.com/564x/04/2f/f4/042ff4fe447b12a7754ea44da86adc92.jpg', 10.00)">Agregar al carrito</button>
+
+              </div>
+            </li>
+            <li>
+              <div id="producto">
+                <img class="imagen" style=" width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/736x/f1/ad/54/f1ad54846c0b23f5f3372d3f41cf18ed.jpg" alt="Producto 3">
+                <h3 class="nombre">Rascador</h3>
+                <p  class="precio">Precio: $5.00</p>
+                <p>Suave rascador para mascotas con forma de huella de gato.</p>
+                <button class="boton" onclick="agregarAlCarrito('Rascador', 'https://i.pinimg.com/736x/f1/ad/54/f1ad54846c0b23f5f3372d3f41cf18ed.jpg', 5.00)">Agregar al carrito</button>
+
+              </div>
+            </li>
+            <li>
+              <div id="producto">
+                <img class="imagen" style=" width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/df/0e/81/df0e812f906a9213bbf1780a54cd528d.jpg" alt="Producto 3">
+                <h3 class="nombre">Cama</h3>
+                <p class="precio">Precio: $15.00</p>
+                <p>Comoda Cama para mascotas con acolchado de los lados.</p>
+                <button class="boton" onclick="agregarAlCarrito('Cama', 'https://i.pinimg.com/564x/df/0e/81/df0e812f906a9213bbf1780a54cd528d.jpg', 15.00)">Agregar al carrito</button>
+
+              </div>
+            </li>
+            <li>
+              <div id="producto">
+                <img class="imagen" style=" width: 250px; height: 260px; border-radius: 10%;"  src="https://i.pinimg.com/564x/4c/3e/07/4c3e07f932be2bac7c8c533770834618.jpg" alt="Producto 3">
+                <h3 class="nombre">Comidera portable</h3>
+                <p class="precio">Precio: $10.00</p>
+                <p>Botella  de agua con compartimiento para comida de las mascotas.</p>
+                <button class="boton" onclick="agregarAlCarrito('Comidera portable', 'https://i.pinimg.com/564x/4c/3e/07/4c3e07f932be2bac7c8c533770834618.jpg', 10.00)">Agregar al carrito</button>
+
+              </div>
+            </li>
+            <li>
+              <div id="producto">
+                <img class="imagen" style=" width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/55/4b/2d/554b2d8109a520805d116003b8a64883.jpg" alt="Producto 3">
+                <h3   class="nombre">Collar</h3>
+                <p class="precio">Precio: $5.00</p>
+                <p>Collar ajustable con hebilla y pequeña placa en forma de hueso.</p>
+                <button class="boton" onclick="agregarAlCarrito('Collar', 'https://i.pinimg.com/564x/55/4b/2d/554b2d8109a520805d116003b8a64883.jpg', 5.00 )">Agregar al carrito</button>
+
+              </div>
+            </li>
+            <li>
+              <div id="producto">
+                  <img class="imagen" style="width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/eb/34/76/eb347604ca90093beddb79f7c52df82f.jpg" alt="Producto 3">
+                  <h3 class="nombre">Pelotas</h3>
+                  <p class="precio">Precio: $5.00</p>
+                  <p>Pelotas de tenis perfectas para juegos en el exterior con las mascotas.</p>
+                  <button class="boton" onclick="agregarAlCarrito('Pelotas', 'https://i.pinimg.com/564x/eb/34/76/eb347604ca90093beddb79f7c52df82f.jpg', 5.00)">Agregar al carrito</button>
+              </div>
+          </li>
+          <li>
+              <div id="producto">
+                  <img class="imagen" style="width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/736x/15/35/49/153549329d15c19586872b8d21f1d9b8.jpg" alt="Producto 3">
+                  <h3 class="nombre">Correa</h3>
+                  <p class="precio">Precio: $10.00</p>
+                  <p>Correa ajustable para dar paseos con las mascotas.</p>
+                  <button class="boton" onclick="agregarAlCarrito('Correa', 'https://i.pinimg.com/736x/15/35/49/153549329d15c19586872b8d21f1d9b8.jpg', 10.00)">Agregar al carrito</button>
+              </div>
+          </li>
+          <li>
+              <div id="producto">
+                  <img class="imagen" style="width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/02/82/60/02826021fcbdc3d9453f4e5e8cf930dc.jpg" alt="Producto 3">
+                  <h3 class="nombre">Balsamo</h3>
+                  <p class="precio">Precio: $10.00</p>
+                  <p>Balsamo para las patitas de gatos y perros, prevee la resequedad, también se puede aplicar a nariz.</p>
+                  <button class="boton" onclick="agregarAlCarrito('Balsamo', 'https://i.pinimg.com/564x/02/82/60/02826021fcbdc3d9453f4e5e8cf930dc.jpg', 10.00)">Agregar al carrito</button>
+              </div>
+          </li>
+          <li>
+              <div id="producto">
+                  <img class="imagen" style="width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/f3/98/6b/f3986b5505b740be59596957e0049386.jpg" alt="Producto 3">
+                  <h3 class="nombre">Removedor de pelusa</h3>
+                  <p class="precio">Precio: $10.00</p>
+                  <p>Rodillo removedor de pelusa de las prendas de ropa.</p>
+                  <button class="boton" onclick="agregarAlCarrito('Removedor de pelusa', 'https://i.pinimg.com/564x/f3/98/6b/f3986b5505b740be59596957e0049386.jpg', 10.00)">Agregar al carrito</button>
+              </div>
+          </li>
+          <li>
+              <div id="producto">
+                  <img class="imagen" style="width: 250px; height: 260px; border-radius: 10%;" src="https://i.pinimg.com/564x/64/ae/09/64ae09426838d1df6b1df4ea9a74d865.jpg" alt="Producto 3">
+                  <h3 class="nombre">Comida para perros</h3>
+                  <p class="precio">Precio: $20.00</p>
+                  <p>Deliciosa y nutritiva comida para los amigos caninos.</p>
+                  <button class="boton" onclick="agregarAlCarrito('Comida para perros', 'https://i.pinimg.com/564x/64/ae/09/64ae09426838d1df6b1df4ea9a74d865.jpg', 20.00)">Agregar al carrito</button>
+              </div>
+          </li>
+        </ul>
+      </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Cat-Dog</p>
+                <ul class="footer-links">
+                    <li>Nico</li>
+                    <li>Nancy</li>
+                    <li>Guillermo</li>
+                    <li>Bryan</li><img src="https://i.pinimg.com/originals/76/d9/5f/76d95f447566b27efa91eea6fa87a42c.gif" alt="Pequeña imagen" class="img-corner"></p>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script>
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, imagen, precio) {
+            carrito.push({ nombre: nombre, imagen: imagen, precio: precio });
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const contadorProductos = document.getElementById('contador-productos');
+            contadorProductos.textContent = carrito.length;
+
+            const containerCartProducts = document.querySelector('.container-cart-products');
+            containerCartProducts.innerHTML = '';
+            carrito.forEach(producto => {
+                const productoHTML = `
+                    <div class="producto-carrito">
+                        <img src="${producto.imagen}" alt="${producto.nombre}">
+                        <h3>${producto.nombre}</h3>
+                        <p>Precio: $${producto.precio.toFixed(2)}</p>
+                    </div>
+                `;
+                containerCartProducts.insertAdjacentHTML('beforeend', productoHTML);
+            });
+        }
+
+        function pagar() {
+            alert('Pago procesado correctamente. Gracias por tu compra.');
+            carrito = [];
+            actualizarCarrito();
+        }
+    </script>
+</body>
+</html>

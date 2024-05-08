@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-column {
+    flex: 1;
+    background-color: rgba(82, 47, 7, 0.726);
+    padding: 150px;
+    color: rgb(255, 255, 255);
+}
+
+.right-column {
+    flex: 1;
+    max-width: 400px;
+    background-color: rgb(255, 255, 255);
+    color: rgba(82, 47, 7, 0.726);
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+}
+
+.corner-image {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+    padding: 30px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: rgba(82, 47, 7, 0.096);
+    border: 1px solid rgba(82, 47, 7, 0.726);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(82, 47, 7, 0.726);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(82, 47, 7, 0.096);
+    color: rgba(82, 47, 7, 0.726);
+    border: 1px solid rgba(82, 47, 7, 0.726);
+}
