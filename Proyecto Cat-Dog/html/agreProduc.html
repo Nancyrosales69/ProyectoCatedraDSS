@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/1581/1581594.png" type="image/x-icon">
+
+    <title>Agregar producto</title>
+    <link rel="stylesheet" href="../css/usuario.css">
+    <link rel="stylesheet" href="../css/formUsu.css">
+</head>
+<body>
+<div class="main-content">
+    <a href="tienda.php" class="cancel-button3">Tienda</a>
+
+    <h1>Agregar producto</h1>
+    <form id="citaForm" action="producinsert.php" method="post">
+        <label for="nombreProducto">Nombre del Producto:</label>
+        <input type="text" id="nombreProducto" name="nombreProducto" required><br><br>
+        <label for="imagen">Imagen del producto:</label>
+    <input type="url" id="imagen" name="imagen" placeholder="https://ejemplo.com/imagen.jpg" required><br><br>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" min="0.01" step="0.01" required><br><br>
+        <input type="submit" value="Agregar Producto" class="cancel-button2">
+    </form>
+</div>
+<div class="main-content"></div>
+</ul>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2024 Cat-Dog</p>
+            <ul class="footer-links">
+                <li>Nico</li>
+                <li>Nancy</li>
+                <li>Guillermo</li>
+                <li>Bryan</li><img src="https://i.pinimg.com/originals/76/d9/5f/76d95f447566b27efa91eea6fa87a42c.gif" alt="Pequeña imagen" class="img-corner"></p>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
